@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* MamaNest Premium Color Palette */
+    --background: 40 33% 98%;
+    --foreground: 30 10% 20%;
+
+    --card: 40 40% 99%;
+    --card-foreground: 30 10% 20%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 30 10% 20%;
+
+    /* Sage Green Primary */
+    --primary: 140 25% 45%;
+    --primary-foreground: 40 40% 99%;
+
+    /* Dusty Pink Secondary */
+    --secondary: 340 30% 75%;
+    --secondary-foreground: 30 10% 20%;
+
+    /* Warm Beige Muted */
+    --muted: 35 30% 92%;
+    --muted-foreground: 30 10% 40%;
+
+    /* Lavender Accent */
+    --accent: 260 20% 75%;
+    --accent-foreground: 30 10% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 40% 99%;
+
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 140 25% 45%;
+
+    /* Chart colors */
+    --chart-1: 140 25% 45%;
+    --chart-2: 340 30% 75%;
+    --chart-3: 260 20% 75%;
+    --chart-4: 35 50% 70%;
+    --chart-5: 200 20% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom MamaNest variables */
+    --sage-light: 140 30% 85%;
+    --sage-dark: 140 30% 30%;
+    --pink-light: 340 40% 92%;
+    --pink-dark: 340 40% 65%;
+    --lavender-light: 260 25% 92%;
+    --beige: 35 40% 88%;
+    --cream: 40 50% 95%;
+  }
+
+  .dark {
+    --background: 30 10% 8%;
+    --foreground: 40 30% 95%;
+
+    --card: 30 10% 12%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 30 10% 12%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 140 30% 50%;
+    --primary-foreground: 30 10% 8%;
+
+    --secondary: 340 40% 60%;
+    --secondary-foreground: 30 10% 8%;
+
+    --muted: 30 10% 15%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 260 25% 65%;
+    --accent-foreground: 30 10% 8%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 30% 95%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 140 30% 50%;
+
+    --chart-1: 140 30% 50%;
+    --chart-2: 340 40% 60%;
+    --chart-3: 260 25% 65%;
+    --chart-4: 35 40% 55%;
+    --chart-5: 200 25% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-xl border border-white/10;
+  }
+}
